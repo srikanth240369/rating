@@ -1,15 +1,15 @@
 {
-    "name": "vaadah/rating",
-    "description": "Rating syetem for L",
-    "require": {
-        "php": ">=5.5",
-        "illuminate/support": ">=5.2"
-    },
+    "name": "devdojo/calculator",
+    "description": "This demo package will do some ",
     "authors": [
         {
             "name": "Srikanth",
             "email": "srikanth.k@vaadah.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {}
 }
+
+
+    
