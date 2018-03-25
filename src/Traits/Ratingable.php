@@ -1,9 +1,9 @@
 <?php
 
-namespace Ghanem\Rating\Traits;
+namespace Vaadah\Rating\Traits;
 
-use Ghanem\Rating\Models\Rating;
 use Illuminate\Database\Eloquent\Model;
+use Vaadah\Rating\Models\Rating;
 
 trait Ratingable
 {
@@ -41,7 +41,7 @@ trait Ratingable
      * @param $max
      *
      * @return mix
-     */ 
+     */
     public function ratingPercent($max = 5)
     {
         $ratings = $this->ratings();
@@ -49,7 +49,7 @@ trait Ratingable
         $total = $ratings->selectRaw('SUM(rating) as total')->pluck('total');
         return ($quantity * $max) > 0 ? $total / (($quantity * $max) / 100) : 0;
     }
-    
+
     /**
      * @param $data
      * @param Model      $author

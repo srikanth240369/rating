@@ -1,6 +1,6 @@
 <?php
 
-namespace Ghanem\Rating\Contracts;
+namespace Vaadah\Rating\Contracts;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,9 +27,9 @@ interface Ratingable
      * @param $max
      *
      * @return mix
-     */ 
+     */
     public function ratingPercent($max = 5);
-    
+
     /**
      * @param $data
      * @param Model      $author

@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-namespace Ghanem\Rating\Commands;
+namespace Vaadah\Rating\Commands;
 
 use Illuminate\Console\Command;
 
@@ -41,7 +41,7 @@ class MigrationCommand extends Command
                 $this->info("Migration successfully created!");
             } else {
                 $this->error(
-                    "Coudn't create migration.\n Check the write permissions".
+                    "Coudn't create migration.\n Check the write permissions" .
                     " within the app/database/migrations directory."
                 );
             }
@@ -55,9 +55,9 @@ class MigrationCommand extends Command
      */
     protected function createMigration()
     {
-        $migration_file = base_path('/database/migrations').'/'.date('Y_m_d_His').'_create_ratings_table.php';
-        if (! file_exists($migration_file) && $fs = fopen($migration_file, 'x')) {
-            fwrite($fs, file_get_contents(__DIR__.'/../database/migrations/create_ratings_table.php'));
+        $migration_file = base_path('/database/migrations') . '/' . date('Y_m_d_His') . '_create_ratings_table.php';
+        if (!file_exists($migration_file) && $fs = fopen($migration_file, 'x')) {
+            fwrite($fs, file_get_contents(__DIR__ . '/../database/migrations/create_ratings_table.php'));
             fclose($fs);
             return true;
         }
