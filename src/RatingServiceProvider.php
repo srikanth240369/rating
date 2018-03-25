@@ -1,28 +1,29 @@
 <?php
 
-namespace Vaadah\Rating;
+namespace Ghanem\Rating;
 
 use Illuminate\Support\ServiceProvider;
 
-class RatingServiceProvider extends ServiceProvider
+class RatingServiceProvider extends ServiceProvider 
 {
     /**
-     * Bootstrap the application services.
+     * Bootstrap any application services.
      *
      * @return void
      */
     public function boot()
     {
-        include __DIR__ . '/routes.php';
+	    $this->publishes([
+	        __DIR__.'/../database/migrations/' => database_path('migrations')
+	    ], 'migrations');
     }
-
+    
     /**
-     * Register the application services.
+     * Register any application services.
      *
      * @return void
      */
     public function register()
     {
-        //
     }
 }
