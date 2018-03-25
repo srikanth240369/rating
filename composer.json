@@ -1,10 +1,22 @@
 {
     "name": "vaadah/rating",
+    "description": "Rating syetem for Laravel>=5.2",
+    "keywords": ["rating", "Ratable", "laravel"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Srikanth",
             "email": "srikanth.k@vaadah.com"
         }
     ],
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vaadah\\Rating\\": "src/"
+        }
+    }
 }
